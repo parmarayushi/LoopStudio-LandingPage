@@ -1,0 +1,377 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <!-- displays site properly based on user's device -->
+
+    <link
+      rel="icon"
+      type="image/png"
+      sizes="32x32"
+      href="./images/favicon-32x32.png"
+    />
+
+    <!-- Font style "Alata" -->
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Alata&display=swap"
+      rel="stylesheet"
+    />
+    <!-- font-family: 'Josefin Sans', sans-serif; (header)-->
+
+    <!-- Font style "Josefin Sans" -->
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Josefin+Sans:wght@300&display=swap"
+      rel="stylesheet"
+    />
+    <!-- font-family: 'Josefin Sans', sans-serif;(simple text) -->
+
+    <title>Frontend Mentor | Loopstudios landing page</title>
+
+    <!-- Feel free to remove these styles or customise in your own stylesheet 👍 -->
+    <style>
+      html,
+      body {
+        height: 100%;
+        box-sizing: border-box;
+        font-family: "Josefin Sans", sans-serif;
+        background-color: #0e0e0e;
+        margin: 0;
+        overflow: hidden;
+      }
+
+      .container {
+        padding: 0 200px;
+        /* border: 1px solid #7d7d7d; */
+      }
+
+      .overflow-auto {
+        height: 100%;
+        overflow: auto;
+      }
+
+      .d-flex {
+        display: flex;
+      }
+
+      .flex-column {
+        flex-direction: column;
+      }
+
+      .justify-content-center {
+        justify-content: center;
+      }
+
+      .justify-content-between {
+        justify-content: space-between;
+      }
+
+      .align-items-center {
+        align-items: center;
+      }
+
+      .header {
+        background-image: url("images/desktop/image-hero.jpg");
+        height: 700px;
+        background-repeat: no-repeat;
+        background-size: cover;
+      }
+
+      .menu {
+        font-family: "Josefin Sans", sans-serif;
+        color: white;
+        padding: 40px 0;
+        margin: 0 200px;
+      }
+
+      .logo {
+        font-size: 32px;
+        font-family: "Alata", sans-serif;
+      }
+
+      .nav {
+        display: flex;
+        list-style-type: none;
+        font-weight: bold;
+        padding-left: 0;
+      }
+
+      .nav-item {
+        padding-right: 15px;
+      }
+
+      .nav-link {
+        text-decoration: none;
+        color: white;
+      }
+      .nav-link:hover {
+        border-bottom: 2px solid;
+      }
+
+      .header-content {
+        border: 2px solid;
+        width: 650px;
+        font-size: 70px;
+        padding: 50px;
+        margin-top: 120px;
+      }
+
+      .card-content {
+        padding: 200px;
+        position: relative;
+        background-color: white;
+      }
+
+      .card {
+        position: absolute;
+        width: 426px;
+        bottom: 87px;
+        left: 772px;
+        padding: 100px;
+        background: white;
+      }
+
+      .card-header {
+        margin: 0;
+        font-size: 50px;
+      }
+
+      .card-text {
+        color: #7d7d7d;
+        font-family: "Alata", sans-serif;
+      }
+
+      .our-creations {
+        padding: 200px;
+        padding-top: 0;
+        background-color: white;
+      }
+
+      .button {
+        border: 2px solid black;
+        padding: 10px 30px;
+        background-color: white;
+        font-weight: bold;
+        letter-spacing: 4px;
+      }
+
+      .cards-wrapper {
+        display: flex;
+        flex-wrap: wrap;
+        gap: 30px;
+      }
+
+      .creation-card {
+        position: relative;
+        width: 252px;
+        height: 484px;
+        background-repeat: no-repeat;
+        background-size: cover;
+      }
+
+      .deep-earth {
+        background-image: url("images/desktop/image-deep-earth.jpg");
+      }
+
+      .night-arcade {
+        background-image: url("images/desktop/image-night-arcade.jpg");
+      }
+      .soccer-team {
+        background-image: url("images/desktop/image-soccer-team.jpg");
+      }
+
+      .the-grid {
+        background-image: url("images/desktop/image-grid.jpg");
+      }
+      .from-up-above-vr {
+        background-image: url("images/desktop/image-from-above.jpg");
+      }
+      .pocket-borealis {
+        background-image: url("images/desktop/image-pocket-borealis.jpg");
+      }
+      .the-curiosity {
+        background-image: url("images/desktop/image-curiosity.jpg");
+      }
+      .make-it-fisheye {
+        background-image: url("images/desktop/image-fisheye.jpg");
+      }
+
+      .image-text {
+        position: absolute;
+        bottom: 0;
+        font-size: 36px;
+        color: white;
+        padding: 20px;
+        margin: 0;
+      }
+
+      .footer {
+        background-color: black;
+        color: white;
+      }
+    </style>
+  </head>
+
+  <body>
+    <div class="overflow-auto">
+      <main class="container">
+        <!-- Start: Header -->
+        <header class="header">
+          <div class="menu">
+            <!-- Start: logo and menu -->
+            <div class="d-flex justify-content-between align-items-center">
+              <h2 class="logo">loopstudios</h2>
+              <nav>
+                <ul class="nav">
+                  <li class="nav-item">
+                    <a class="nav-link" href="">About</a>
+                  </li>
+                  <li class="nav-item">
+                    <a class="nav-link" href="">Careers</a>
+                  </li>
+                  <li class="nav-item">
+                    <a class="nav-link" href="">Events</a>
+                  </li>
+                  <li class="nav-item">
+                    <a class="nav-link" href="">Products</a>
+                  </li>
+                  <li class="nav-item">
+                    <a class="nav-link" href="">Support</a>
+                  </li>
+                </ul>
+              </nav>
+            </div>
+            <!-- End: logo and menu -->
+
+            <!-- Start: Header content -->
+            <div class="header-content">IMMERSIVE EXPERIENCES THAT DELIVER</div>
+            <!-- End: Header content -->
+          </div>
+        </header>
+        <!-- End: Header -->
+
+        <!-- Start: Card and text -->
+        <section class="card-content">
+          <img src="images/desktop/image-interactive.jpg" alt="img-1" />
+          <div class="card">
+            <h3 class="card-header">THE LEADER IN INTERACTIVE VR</h3>
+            <p class="card-text">
+              Founded in 2011, Loopstudios has been producing world-class
+              virtual reality projects for some of the best companies around the
+              globe. Our award-winning creations have transformed businesses
+              through digital experiences that bind to their brand.
+            </p>
+          </div>
+        </section>
+        <!-- End: Card and text -->
+
+        <!-- Start: Our Creations -->
+        <section class="our-creations">
+          <!-- Start: header and button -->
+          <div
+            class="d-flex justify-content-between align-items-center"
+            style="margin-bottom: 100px"
+          >
+            <h2 class="card-header">OUR CREATIONS</h2>
+            <button class="button">SEE ALL</button>
+          </div>
+          <!-- End: header and button -->
+
+          <!-- Start: Cards -->
+          <div class="cards-wrapper">
+            <div class="creation-card deep-earth">
+              <p class="image-text">DEEP EARTH</p>
+            </div>
+            <div class="creation-card night-arcade">
+              <p class="image-text">NIGHT ARCADE</p>
+            </div>
+            <div class="creation-card soccer-team">
+              <p class="image-text">SOCCER TEAM VR</p>
+            </div>
+            <div class="creation-card the-grid">
+              <p class="image-text">THE GRID</p>
+            </div>
+            <div class="creation-card from-up-above-vr">
+              <p class="image-text">FROM UP ABOVE VR</p>
+            </div>
+            <div class="creation-card pocket-borealis">
+              <p class="image-text">POCKET BOREALIS</p>
+            </div>
+            <div class="creation-card the-curiosity">
+              <p class="image-text">THE CURIOSITY</p>
+            </div>
+            <div class="creation-card make-it-fisheye">
+              <p class="image-text">MAKE IT FISHEYE</p>
+            </div>
+          </div>
+          <!-- Start: Cards -->
+        </section>
+        <!-- End: Our Creations -->
+
+        <!-- Start: Footer -->
+        <footer class="footer">
+          <div
+            class="container d-flex justify-content-between align-items-center"
+            style="padding-bottom: 30px"
+          >
+            <div>
+              <h2 class="logo">loopstudios</h2>
+              <nav>
+                <ul class="nav">
+                  <li class="nav-item">
+                    <a class="nav-link" href="">About</a>
+                  </li>
+                  <li class="nav-item">
+                    <a class="nav-link" href="">Careers</a>
+                  </li>
+                  <li class="nav-item">
+                    <a class="nav-link" href="">Events</a>
+                  </li>
+                  <li class="nav-item">
+                    <a class="nav-link" href="">Products</a>
+                  </li>
+                  <li class="nav-item">
+                    <a class="nav-link" href="">Support</a>
+                  </li>
+                </ul>
+              </nav>
+            </div>
+
+            <div>
+              <div style="margin: 22px 0; text-align: end">
+                <img
+                  style="padding-right: 10px"
+                  src="images\icon-facebook.svg"
+                  alt="facebook"
+                />
+                <img
+                  style="padding-right: 10px"
+                  src="images\icon-twitter.svg"
+                  alt="twitter"
+                />
+                <img
+                  style="padding-right: 10px"
+                  src="images\icon-pinterest.svg"
+                  alt="pinterest"
+                />
+                <img
+                  style="padding-right: 10px"
+                  src="images\icon-instagram.svg"
+                  alt="instagram"
+                />
+              </div>
+              <div style="color: #7d7d7d; font-family: Alata, sans-serif">
+                © 2021 Loopstudios. All rights reserved.
+              </div>
+            </div>
+          </div>
+        </footer>
+        <!-- End: Footer -->
+      </main>
+    </div>
+  </body>
+</html>
