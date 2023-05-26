@@ -44,9 +44,11 @@
         overflow: hidden;
       }
 
-      .container {
-        padding: 0 200px;
-        /* border: 1px solid #7d7d7d; */
+      @media (min-width: 1400px) {
+        .container {
+          max-width: 80%;
+          margin: 0 auto;
+        }
       }
 
       .overflow-auto {
@@ -75,8 +77,8 @@
       }
 
       .header {
-        background-image: url("images/desktop/image-hero.jpg");
-        height: 700px;
+        background-image: url("images/mobile/image-hero.jpg");
+        height: 1300px;
         background-repeat: no-repeat;
         background-size: cover;
       }
@@ -85,7 +87,7 @@
         font-family: "Josefin Sans", sans-serif;
         color: white;
         padding: 40px 0;
-        margin: 0 200px;
+        margin: 0 50px;
       }
 
       .logo {
@@ -94,10 +96,7 @@
       }
 
       .nav {
-        display: flex;
-        list-style-type: none;
-        font-weight: bold;
-        padding-left: 0;
+        display: none;
       }
 
       .nav-item {
@@ -114,49 +113,78 @@
 
       .header-content {
         border: 2px solid;
-        width: 650px;
-        font-size: 70px;
+        font-size: 80px;
         padding: 50px;
-        margin-top: 120px;
+        margin-top: 350px;
       }
 
       .card-content {
-        padding: 200px;
-        position: relative;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
         background-color: white;
+        padding: 200px 50px 150px 50px;
+      }
+
+      .desktop-image {
+        display: none;
+      }
+
+      .mobile-image {
+        display: block;
       }
 
       .card {
-        position: absolute;
-        width: 426px;
-        bottom: 87px;
-        left: 772px;
-        padding: 100px;
         background: white;
+        position: relative;
+        padding: 50px;
+        text-align: center;
       }
 
       .card-header {
         margin: 0;
-        font-size: 50px;
+        font-size: 56px;
       }
 
       .card-text {
         color: #7d7d7d;
+        font-size: 28px;
         font-family: "Alata", sans-serif;
       }
 
-      .our-creations {
-        padding: 200px;
+      .our-creations-wrapper {
+        padding: 50px;
         padding-top: 0;
         background-color: white;
       }
 
-      .button {
+      .our-creation {
+        text-align: center;
+        margin-bottom: 100px;
+      }
+
+      .button-desktop {
+        display: none;
+        cursor: pointer;
+      }
+
+      .button-mobile {
+        cursor: pointer;
+        display: block;
+        font-size: 20px;
+        padding: 20px 76px;
+        margin-top: 60px;
+        margin-bottom: 100px;
         border: 2px solid black;
-        padding: 10px 30px;
         background-color: white;
         font-weight: bold;
         letter-spacing: 4px;
+      }
+
+      .button-mobile:hover,
+      .button-desktop:hover {
+        background-color: black;
+        color: white;
       }
 
       .cards-wrapper {
@@ -166,38 +194,129 @@
       }
 
       .creation-card {
-        position: relative;
-        width: 252px;
-        height: 484px;
+        width: 100%;
+        height: 240px;
         background-repeat: no-repeat;
-        background-size: cover;
       }
 
       .deep-earth {
-        background-image: url("images/desktop/image-deep-earth.jpg");
+        background-image: url("images/mobile/image-deep-earth.jpg");
+        position: relative;
+      }
+      .deep-earth::after {
+        position: absolute;
+        content: "";
+        top: 0;
+        bottom: 0;
+        left: 0;
+        right: 0;
+        background: linear-gradient(transparent, black);
+        opacity: 0.5;
       }
 
       .night-arcade {
-        background-image: url("images/desktop/image-night-arcade.jpg");
+        background-image: url("images/mobile/image-night-arcade.jpg");
+        position: relative;
       }
+      .night-arcade::after {
+        position: absolute;
+        content: "";
+        top: 0;
+        bottom: 0;
+        left: 0;
+        right: 0;
+        background: linear-gradient(transparent, black);
+        opacity: 0.5;
+      }
+
       .soccer-team {
-        background-image: url("images/desktop/image-soccer-team.jpg");
+        background-image: url("images/mobile/image-soccer-team.jpg");
+        position: relative;
+      }
+      .soccer-team::after {
+        position: absolute;
+        content: "";
+        top: 0;
+        bottom: 0;
+        left: 0;
+        right: 0;
+        background: linear-gradient(transparent, black);
+        opacity: 0.5;
       }
 
       .the-grid {
-        background-image: url("images/desktop/image-grid.jpg");
+        background-image: url("images/mobile/image-grid.jpg");
+        position: relative;
       }
+      .the-grid::after {
+        position: absolute;
+        content: "";
+        top: 0;
+        bottom: 0;
+        left: 0;
+        right: 0;
+        background: linear-gradient(transparent, black);
+        opacity: 0.5;
+      }
+
       .from-up-above-vr {
-        background-image: url("images/desktop/image-from-above.jpg");
+        background-image: url("images/mobile/image-from-above.jpg");
+        position: relative;
       }
+      .from-up-above-vr::after {
+        position: absolute;
+        content: "";
+        top: 0;
+        bottom: 0;
+        left: 0;
+        right: 0;
+        background: linear-gradient(transparent, black);
+        opacity: 0.5;
+      }
+
       .pocket-borealis {
-        background-image: url("images/desktop/image-pocket-borealis.jpg");
+        background-image: url("images/mobile/image-pocket-borealis.jpg");
+        position: relative;
       }
+      .pocket-borealis::after {
+        position: absolute;
+        content: "";
+        top: 0;
+        bottom: 0;
+        left: 0;
+        right: 0;
+        background: linear-gradient(transparent, black);
+        opacity: 0.5;
+      }
+
       .the-curiosity {
-        background-image: url("images/desktop/image-curiosity.jpg");
+        background-image: url("images/mobile/image-curiosity.jpg");
+        position: relative;
       }
+      .the-curiosity::after {
+        position: absolute;
+        content: "";
+        top: 0;
+        bottom: 0;
+        left: 0;
+        right: 0;
+        background: linear-gradient(transparent, black);
+        opacity: 0.5;
+      }
+
       .make-it-fisheye {
-        background-image: url("images/desktop/image-fisheye.jpg");
+        background-image: url("images/mobile/image-fisheye.jpg");
+        position: relative;
+      }
+      .make-it-fisheye::after {
+        position: absolute;
+        content: "";
+        top: 0;
+        bottom: 0;
+        left: 0;
+        right: 0;
+        background: linear-gradient(transparent, black);
+        opacity: 0.5;
       }
 
       .image-text {
@@ -207,11 +326,222 @@
         color: white;
         padding: 20px;
         margin: 0;
+        z-index: 1;
+      }
+
+      .footer-wrapper {
+        background-color: black;
+        color: white;
       }
 
       .footer {
-        background-color: black;
-        color: white;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        padding-bottom: 30px;
+      }
+
+      .nav-footer {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        list-style-type: none;
+        font-weight: bold;
+        padding-left: 0;
+      }
+
+      .nav-item-footer {
+        padding: 20px 0;
+        font-size: 22px;
+      }
+
+      .footer-links {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+      }
+
+      .links {
+        margin: 22px 0;
+        text-align: center;
+      }
+
+      @media (min-width: 768px) {
+        .card-content {
+          flex-direction: row;
+          align-items: start;
+          padding: 50px;
+        }
+
+        .img {
+          width: 50%;
+        }
+
+        .card {
+          width: 50%;
+          padding: 50px 0 50px 50px;
+          margin-top: 195px;
+          text-align: start;
+        }
+
+        .desktop-image {
+          display: none;
+        }
+
+        .mobile-image {
+          display: block;
+        }
+        .cards-wrapper {
+          justify-content: center;
+        }
+        .creation-card {
+          width: 540px;
+        }
+
+        .footer {
+          flex-direction: row;
+          justify-content: space-between;
+          padding: 0 100px;
+        }
+
+        .nav-footer {
+          flex-direction: row;
+        }
+
+        .nav-item-footer {
+          padding-right: 15px;
+          font-size: 16px;
+        }
+
+        .footer-links {
+          display: flex;
+          flex-direction: column;
+          align-items: start;
+        }
+
+        .links {
+          text-align: end;
+        }
+      }
+
+      @media (min-width: 1400px) {
+        .header {
+          background-image: url("images/desktop/image-hero.jpg");
+          height: 700px;
+        }
+
+        .nav {
+          display: flex;
+          list-style-type: none;
+          font-weight: bold;
+          padding-left: 0;
+        }
+
+        .menu {
+          margin: 0 200px;
+        }
+
+        .header-content {
+          width: 650px;
+          font-size: 70px;
+          margin-top: 120px;
+        }
+
+        .card-content {
+          padding: 200px;
+        }
+
+        .desktop-image {
+          display: block;
+        }
+
+        .mobile-image {
+          display: none;
+        }
+
+        .card-header {
+          font-size: 50px;
+        }
+
+        .card-text {
+          font-size: 16px;
+        }
+
+        .our-creations-wrapper {
+          padding: 200px;
+          padding-top: 0;
+        }
+
+        .our-creation {
+          display: flex;
+          justify-content: space-between;
+          align-items: center;
+        }
+
+        .button-mobile {
+          display: none;
+        }
+
+        .button-desktop {
+          display: block;
+          font-size: 14px;
+          padding: 10px 30px;
+          border: 2px solid black;
+          background-color: white;
+          font-weight: bold;
+          letter-spacing: 4px;
+        }
+
+        .creation-card {
+          position: relative;
+          width: 252px;
+          height: 484px;
+          background-size: cover;
+        }
+
+        .deep-earth {
+          background-image: url("images/desktop/image-deep-earth.jpg");
+          position: relative;
+        }
+
+        .night-arcade {
+          background-image: url("images/desktop/image-night-arcade.jpg");
+          position: relative;
+        }
+
+        .soccer-team {
+          background-image: url("images/desktop/image-soccer-team.jpg");
+          position: relative;
+        }
+
+        .the-grid {
+          background-image: url("images/desktop/image-grid.jpg");
+          position: relative;
+        }
+
+        .from-up-above-vr {
+          background-image: url("images/desktop/image-from-above.jpg");
+          position: relative;
+        }
+
+        .pocket-borealis {
+          background-image: url("images/desktop/image-pocket-borealis.jpg");
+          position: relative;
+        }
+
+        .the-curiosity {
+          background-image: url("images/desktop/image-curiosity.jpg");
+          position: relative;
+        }
+
+        .make-it-fisheye {
+          background-image: url("images/desktop/image-fisheye.jpg");
+          position: relative;
+        }
+
+        .footer {
+          padding: 0 200px;
+        }
       }
     </style>
   </head>
@@ -256,7 +586,18 @@
 
         <!-- Start: Card and text -->
         <section class="card-content">
-          <img src="images/desktop/image-interactive.jpg" alt="img-1" />
+          <div class="img">
+            <img
+              src="images/desktop/image-interactive.jpg"
+              alt="img-1"
+              class="desktop-image"
+            />
+            <img
+              src="images/mobile/image-interactive.jpg"
+              alt="img-1"
+              class="mobile-image"
+            />
+          </div>
           <div class="card">
             <h3 class="card-header">THE LEADER IN INTERACTIVE VR</h3>
             <p class="card-text">
@@ -270,14 +611,11 @@
         <!-- End: Card and text -->
 
         <!-- Start: Our Creations -->
-        <section class="our-creations">
+        <section class="our-creations-wrapper">
           <!-- Start: header and button -->
-          <div
-            class="d-flex justify-content-between align-items-center"
-            style="margin-bottom: 100px"
-          >
+          <div class="our-creation">
             <h2 class="card-header">OUR CREATIONS</h2>
-            <button class="button">SEE ALL</button>
+            <button class="button-desktop">SEE ALL</button>
           </div>
           <!-- End: header and button -->
 
@@ -308,33 +646,33 @@
               <p class="image-text">MAKE IT FISHEYE</p>
             </div>
           </div>
+          <div class="button d-flex justify-content-center">
+            <button class="button-mobile">SEE ALL</button>
+          </div>
           <!-- Start: Cards -->
         </section>
         <!-- End: Our Creations -->
 
         <!-- Start: Footer -->
-        <footer class="footer">
-          <div
-            class="container d-flex justify-content-between align-items-center"
-            style="padding-bottom: 30px"
-          >
-            <div>
+        <footer class="footer-wrapper">
+          <div class="container footer">
+            <div class="footer-links">
               <h2 class="logo">loopstudios</h2>
               <nav>
-                <ul class="nav">
-                  <li class="nav-item">
+                <ul class="nav-footer">
+                  <li class="nav-item-footer">
                     <a class="nav-link" href="">About</a>
                   </li>
-                  <li class="nav-item">
+                  <li class="nav-item-footer">
                     <a class="nav-link" href="">Careers</a>
                   </li>
-                  <li class="nav-item">
+                  <li class="nav-item-footer">
                     <a class="nav-link" href="">Events</a>
                   </li>
-                  <li class="nav-item">
+                  <li class="nav-item-footer">
                     <a class="nav-link" href="">Products</a>
                   </li>
-                  <li class="nav-item">
+                  <li class="nav-item-footer">
                     <a class="nav-link" href="">Support</a>
                   </li>
                 </ul>
@@ -342,7 +680,7 @@
             </div>
 
             <div>
-              <div style="margin: 22px 0; text-align: end">
+              <div class="links">
                 <img
                   style="padding-right: 10px"
                   src="images\icon-facebook.svg"
